@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.7.2'
     id 'io.spring.dependency-management' version '1.0.12.RELEASE'
     id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.7.10'
 }
 
 group = 'ru.grobikon.micro'
@@ -38,10 +39,17 @@ dependencies {
 
     // драйвер БД
     runtimeOnly 'org.postgresql:postgresql'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 dependencyManagement {
     imports {
         mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
 }
