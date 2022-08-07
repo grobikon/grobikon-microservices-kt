@@ -1,0 +1,9 @@
+rootProject.name = 'grobikon-microservices-kt'
+
+includeBuild 'grobikon-server'
+includeBuild 'grobikon-config'
+includeBuild 'grobikon-gateway'
+includeBuild 'grobikon-common-entity'
+includeBuild 'grobikon-todo'
+includeBuild 'grobikon-utils'
+includeBuild 'grobikon-users'
